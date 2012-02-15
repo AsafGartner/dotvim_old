@@ -50,7 +50,7 @@ endif
 nmap <C-E> :b#<CR>
 
 " NERDTree
-nmap <C-P> :NERDTreeToggle<CR>
+nmap <C-\> :NERDTreeToggle<CR>
 nmap <leader>p :NERDTreeFind<CR>
 
 " NERDCommenter
