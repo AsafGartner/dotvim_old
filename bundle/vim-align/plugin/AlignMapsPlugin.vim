@@ -152,7 +152,7 @@ if !hasmapto('<Plug>AM_ts:')	|map <unique> <Leader>ts:	<Plug>AM_ts:|endif
 if !hasmapto('<Plug>AM_ts;')	|map <unique> <Leader>ts;	<Plug>AM_ts;|endif
 if !hasmapto('<Plug>AM_ts<')	|map <unique> <Leader>ts<	<Plug>AM_ts<|endif
 if !hasmapto('<Plug>AM_ts=')	|map <unique> <Leader>ts=	<Plug>AM_ts=|endif
-if !hasmapto('<Plug>AM_w=')		|map <unique> <Leader>w=	<Plug>AM_w=|endif
+"if !hasmapto('<Plug>AM_w=')		|map <unique> <Leader>w=	<Plug>AM_w=|endif
 if !hasmapto('<Plug>AM_t?')		|map <unique> <Leader>t?	<Plug>AM_t?|endif
 if !hasmapto('<Plug>AM_t~')		|map <unique> <Leader>t~	<Plug>AM_t~|endif
 if !hasmapto('<Plug>AM_t@')		|map <unique> <Leader>t@	<Plug>AM_t@|endif

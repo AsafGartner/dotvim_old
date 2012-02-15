@@ -59,7 +59,7 @@ nmap <leader>/ <plug>NERDCommenterToggle
 vmap <leader>/ <plug>NERDCommenterToggle
 
 " taglist
-nmap <leader>t :TlistToggle<CR>
+nmap <leader>tl :TlistToggle<CR>
 
 " generate tags
 map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
