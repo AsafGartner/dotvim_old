@@ -34,9 +34,10 @@ set sts=4
 set sw=4
 set et
 
+set ignorecase
+set smartcase
 set incsearch
 set hlsearch
-set smartcase
 
 set nobackup
 set noswapfile
@@ -60,6 +61,9 @@ vmap <leader>/ <plug>NERDCommenterToggle
 " taglist
 nmap <leader>t :TlistToggle<CR>
 
+" generate tags
+map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
+
 " command-t
 nmap <unique> <silent> <Leader><Leader> :CommandT<CR>
 nmap <unique> <silent> <Leader><Leader><Leader> :CommandTFlush<CR>:CommandT<CR>
@@ -67,3 +71,8 @@ let g:CommandTMatchWindowAtTop=1
 
 " status line
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+" paste toggle
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
