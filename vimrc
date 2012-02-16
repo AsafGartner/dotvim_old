@@ -86,4 +86,3 @@ set showmode
 nmap <C-V> <F2>"+gP<F2>
 imap <C-V> <ESC><C-V>i
 vmap <C-C> "+y
-
