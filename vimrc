@@ -6,6 +6,7 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 
+set gfn=Inconsolata\ Medium\ 15
 set number
 set numberwidth=3
 set textwidth=0
@@ -17,6 +18,10 @@ set wildmenu
 set laststatus=2
 set listchars=tab:▷⋅,trail:·
 set list
+set so=5
+set siso=10
+set guioptions-=T " remove toolbar
+set guioptions-=m " remove menu
 
 set background=dark
 let g:solarized_termtrans=1
@@ -76,3 +81,9 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
+
+" copy/paste stuff
+nmap <C-V> <F2>"+gP<F2>
+imap <C-V> <ESC><C-V>i
+vmap <C-C> "+y
+
