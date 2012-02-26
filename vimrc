@@ -76,9 +76,12 @@ nmap <leader>tl :TlistToggle<CR>
 map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
 
 " command-t
-nmap <unique> <silent> <Leader><Leader> :CommandT<CR>
-nmap <unique> <silent> <Leader><Leader><Leader> :CommandTFlush<CR>:CommandT<CR>
-let g:CommandTMatchWindowAtTop=1
+"nmap <unique> <silent> <Leader><Leader> :CommandT<CR>
+"nmap <unique> <silent> <Leader><Leader><Leader> :CommandTFlush<CR>:CommandT<CR>
+"let g:CommandTMatchWindowAtTop=1
+
+" FuzzyFinder
+nmap <unique> <silent> <Leader><Leader> :FufCoverageFile<CR>
 
 " status line
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
