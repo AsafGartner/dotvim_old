@@ -22,6 +22,12 @@ set so=5
 set siso=10
 set guioptions-=T " remove toolbar
 set guioptions-=m " remove menu
+" remove scrollbars
+set guioptions-=l
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
+set guioptions-=b
 
 set background=dark
 let g:solarized_termtrans=1
