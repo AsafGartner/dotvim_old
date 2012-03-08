@@ -63,6 +63,7 @@ nmap <C-E> :b#<CR>
 
 " NERDTree
 nmap <C-\> :NERDTreeToggle<CR>
+nmap <leader>nt :NERDTreeClose<CR>:NERDTree<CR>
 nmap <leader>p :NERDTreeFind<CR>
 
 " NERDCommenter
@@ -76,15 +77,11 @@ nmap <leader>tl :TlistToggle<CR>
 map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
 
 " command-t
-"nmap <unique> <silent> <Leader><Leader> :CommandT<CR>
-"nmap <unique> <silent> <Leader><Leader><Leader> :CommandTFlush<CR>:CommandT<CR>
-"let g:CommandTMatchWindowAtTop=1
-
-" FuzzyFinder
-nmap <unique> <silent> <Leader><Leader> :FufCoverageFile<CR>
+nmap <unique> <silent> <Leader><Leader> :CommandT<CR>
+let g:CommandTMatchWindowAtTop=1
 
 " status line
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%{rvm#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " paste toggle
 nnoremap <F2> :set invpaste paste?<CR>
@@ -95,3 +92,7 @@ set showmode
 nmap <C-V> <F2>"+gP<F2>
 imap <C-V> <ESC><C-V>i
 vmap <C-C> "+y
+
+set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
+set thesaurus-=~/.vim/thesaurus/mthesaur.txt thesaurus+=~/.vim/thesaurus/mthesaur.txt
+autocmd VimEnter * NERDTree
